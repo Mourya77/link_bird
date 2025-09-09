@@ -20,7 +20,6 @@ export function SequenceTab({ campaign }: { campaign: Campaign }) {
             </CardHeader>
             <CardContent>
                 <div className="grid md:grid-cols-2 gap-8">
-                    {/* Left Column: Available Fields */}
                     <div>
                         <h3 className="font-semibold mb-2">Request Message</h3>
                         <p className="text-sm text-gray-500 mb-4">
@@ -38,7 +37,6 @@ export function SequenceTab({ campaign }: { campaign: Campaign }) {
                         </div>
                     </div>
 
-                    {/* Right Column: Message Template Editor */}
                     <div>
                         <h3 className="font-semibold mb-2">Message Template</h3>
                         <p className="text-sm text-gray-500 mb-4">
@@ -46,7 +44,8 @@ export function SequenceTab({ campaign }: { campaign: Campaign }) {
                         </p>
                         <Textarea
                             className="min-h-[150px]"
-                            placeholder="Hi {{firstName}}, let's connect!"
+                            // **THE FIX IS HERE**
+                            placeholder="Hi {{firstName}}, let&apos;s connect!"
                         />
                         <div className="flex justify-end gap-2 mt-4">
                             <Button variant="outline">Preview</Button>
